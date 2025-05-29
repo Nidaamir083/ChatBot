@@ -1,17 +1,9 @@
 gradio
-os
-google.generativeai
+google-generativeai
 langchain
-openai
+langchain-google-genai
 faiss-cpu
 tiktoken
-google-generativeai
-langchain-google-genai
-ChatGoogleGenerativeAI
-langchain_core.messages
-HumanMessage
-AIMessage
-SystemMessage
-gemini-1.5-flash
-langchain.schema
+openai
+
 
