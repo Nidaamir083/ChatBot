@@ -1,8 +1,31 @@
-!pip install gradio
+
 import os
 import streamlit as st
 import google.generativeai as genai
 import gradio as gr
+import streamlit as st
+import google.generativeai as genai
+import os
+
+st.title("Gemini-Powered AI Chatbot for Oncology")
+
+api_key = os.getenv("GOOGLE_API_KEY")
+if not api_key:
+    st.error("API key missing. Please set GOOGLE_API_KEY as an environment variable.")
+else:
+    genai.configure(api_key=api_key)
+    model = genai.GenerativeModel("gemini-pro")
+
+    if "history" not in st.session_state:
+        st.session_state.history = []
+
+    user_input = st.text_input("Ask a question about ATC or drug repurposing:")
+    if user_input:
+        st.session_state.history.append(f"You: {user_input}")
+        response = model.generate_content("\n".join(st.session_state.history)).text
+        st.session_state.history.append(f"Bot: {response}")
+        st.write(response)
+
 
 os.environ["GEN_AI_API_KEY"] = "AIzaSyAQLrfHZtIYyqOKUpJcBCRVXID_bt1SaJg"
 
