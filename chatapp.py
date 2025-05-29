@@ -1,5 +1,6 @@
 !pip install gradio
 import os
+import streamlit as st
 import google.generativeai as genai
 import gradio as gr
 
