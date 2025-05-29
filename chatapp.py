@@ -57,14 +57,10 @@ def chat_with_bot(user_input):
 # Create Gradio Web Interface
 gr.Interface(fn=chat_with_bot, inputs="text", outputs="text", title="AI Chatbot", description="Chat with AI!").launch()
 
-!pip install langchain
-!pip install langchain openai faiss-cpu tiktoken
-!pip install google-generativeai
 
 import google.generativeai as genai
 genai.configure(api_key="GOOGLE_API_KEY")
 
-!pip install google-generativeai langchain-google-genai
 import google.generativeai as genai
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
