@@ -18,4 +18,16 @@ This project implements an interactive AI chatbot powered by **Google Gemini Pro
 
 ## 📁 Project Structure
 
+---
+title: AI Oncologist Chatbot
+emoji: 🧠
+colorFrom: pink
+colorTo: purple
+sdk: streamlit
+app_file: app.py
+pinned: false
+---
+
+
+
 
